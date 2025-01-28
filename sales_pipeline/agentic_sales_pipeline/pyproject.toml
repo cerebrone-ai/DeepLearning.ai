@@ -1,0 +1,23 @@
+[project]
+name = "agentic_sales_pipeline"
+version = "0.1.0"
+description = "agentic_sales_pipeline using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.98.0,<1.0.0"
+]
+
+[project.scripts]
+agentic_sales_pipeline = "agentic_sales_pipeline.main:run"
+run_crew = "agentic_sales_pipeline.main:run"
+train = "agentic_sales_pipeline.main:train"
+replay = "agentic_sales_pipeline.main:replay"
+test = "agentic_sales_pipeline.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
